@@ -7,7 +7,7 @@ import { ESLint } from 'eslint';
 const getCommand = (step: number) => core.getInput(`s${step}`);
 
 async function runPrettier(command: string, changedFiles: string[]) {
-  await exec.getExecOutput(command, ['--', '--ignore-unknown', ...changedFiles]);
+  await exec.getExecOutput(command, ['--ignore-unknown', ...changedFiles]);
 }
 
 async function runLint(command: string, changedFiles: string[]) {
